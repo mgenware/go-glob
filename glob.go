@@ -34,3 +34,8 @@ func IsFullMatch(value, pattern string) bool {
 
 	return j >= n
 }
+
+// IsPartialMatch returns true if value is partial match with given pattern.
+func IsPartialMatch(value, pattern string) bool {
+	return IsFullMatch(value, "*"+pattern+"*")
+}
