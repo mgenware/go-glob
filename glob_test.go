@@ -19,7 +19,12 @@ func TestIsFullMatch(t *testing.T) {
 		"axxxbdxxxd",
 		"aaa",
 		"azzzzbdbc", // 15
-		"azzzzbdbx"}
+		"azzzzbdbx",
+		"abc",
+		"zaaz",
+		"zaaz",
+		"az", // 20
+		"za"}
 	patterns := []string{
 		"",
 		"",
@@ -36,7 +41,12 @@ func TestIsFullMatch(t *testing.T) {
 		"a*b?*c",
 		"aa",
 		"a***bc", // 15
-		"a***bc"}
+		"a***bc",
+		"**",
+		"*a*",
+		"*a*",
+		"*a*", // 20
+		"*a*"}
 	results := []bool{
 		true,
 		false,
@@ -53,7 +63,12 @@ func TestIsFullMatch(t *testing.T) {
 		false,
 		false,
 		true, // 15
-		false}
+		false,
+		true,
+		true,
+		true,
+		true, // 20
+		true}
 
 	for i := range patterns {
 		if IsFullMatch(values[i], patterns[i]) != results[i] {
