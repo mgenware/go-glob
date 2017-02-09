@@ -1,4 +1,7 @@
 # go-glob
+
+[![Build Status](https://travis-ci.org/mgenware/go-glob.svg?branch=master)](http://travis-ci.org/mgenware/go-glob)
+
 Another Glob Library for Golang
 
 ## Installation
